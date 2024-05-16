@@ -1,0 +1,71 @@
+<nav class="navbar">
+    <div class="nav">
+        <img [src]="logosrc"class="brand-logo" alt="">
+        <header class="titel">
+            <p class="sub-heading">Men's Clothing</p>
+      
+            <div  class="homelogo">
+             <img [src]="Homeimage" class="home_logo" alt="">
+            </div>
+        </header>
+    
+
+
+    <div class="nav-items" >
+        <div class="search"  id="subnew" >
+                <input type="text" (keyup)="onKey($event)" class="search-box" id="myTextBox" placeholder="search brand, product" >
+            <button  class="search-btn" id="myButton" >search</button>
+        </div>
+    </div>
+    <div>
+        <img [src]="cartimage"  class="cartimage" alt="">
+        
+    </div>
+    <img [src]="userimage" class="userimage" alt="">
+</div>
+
+
+<!--**************************************menu section ***********************************************-->
+<div id="login-page">
+
+    <ul class="links-container" id="myList">
+       
+        <li class="link-item"><a href="#"  data-value="women" class="link"  (click)="toggleComponent('component2')">women</a></li>
+        <li class="link-item"><a href="#"  data-value="men" class="link" (click)="toggleComponent('component3')">men</a></li>
+        <li class="link-item"><a href="#"  data-value="kids" class="link" (click)="toggleComponent('component4')">kids</a></li>
+        <li class="link-item"><a href="#"  data-value="accessories" class="link" (click)="toggleComponent('component5')">accessories</a></li>
+    </ul>
+</div>
+
+</nav>
+<!--***************************************header section *********************************************-->
+<header class="hero-section">
+    <div class="content">
+        <img [src]="bgimage" class="logo" alt="">
+        <img [src]="bgimage3" class="bglogo" alt="">
+        <p class="sub-heading">best fashion collection of all time</p>
+    </div>
+</header>
+ 
+<!--****************************************body cards ******************************-->
+
+<section class="product">
+    <h2 class="product-category">best selling</h2>
+  
+    <div class="product-container" id="product-container">
+
+        <div class="product-card"  *ngFor="let s of zcart">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img [src]="s.path" class="product-thumb" alt="">
+                <button class="card-btn"(click)="addProductToCart(s)">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">{{s.name}}</h2>
+                <p class="product-short-des">Quality as puma</p>
+                <span class="price">$20</span><span class="actual-price">{{s.price}}</span>
+            </div>
+        </div>
+        
+    </div>
+</section>

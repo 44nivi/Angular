@@ -1,0 +1,22 @@
+<!-- <router-outlet></router-outlet> -->
+
+<div *ngIf="childMsg === 'component1'">
+<app-user-home [logosrc] = "logosrc" [Homeimage]="Homeimage" [cartimage]="cartimage" [bgimage]="bgimage" [bgimage3]="bgimage3" [userimage]="userimage"  (eventEmitter)="getMsgFromChild($event)" ></app-user-home>
+</div>
+<div *ngIf="childMsg === 'component2'">
+<app-women-page [logosrc] = "logosrc" [Homeimage]="Homeimage" [cartimage]="cartimage" [bgimage]="bgimage" [bgimage3]="bgimage3" [userimage]="userimage" (eventEmitter)="getMsgFromChild($event)" ></app-women-page>  </div>
+
+<div *ngIf="childMsg === 'component3'">
+<app-men-page [logosrc] = "logosrc" [Homeimage]="Homeimage" [cartimage]="cartimage" [bgimage]="bgimage" [bgimage3]="bgimage3" [userimage]="userimage" (eventEmitter)="getMsgFromChild($event)"></app-men-page>  </div>
+
+<div *ngIf="childMsg === 'component4'">
+<app-kids-page [logosrc] = "logosrc" [Homeimage]="Homeimage" [cartimage]="cartimage" [bgimage]="bgimage" [bgimage3]="bgimage3" [userimage]="userimage" (eventEmitter)="getMsgFromChild($event)"></app-kids-page>  </div>
+    
+<div *ngIf="childMsg === 'component5'">
+<app-accessories-page [logosrc] = "logosrc" [Homeimage]="Homeimage" [cartimage]="cartimage" [bgimage]="bgimage" [bgimage3]="bgimage3" [userimage]="userimage" (eventEmitter)="getMsgFromChild($event)"></app-accessories-page>  </div>
+
+<div *ngIf="childMsg === 'component6'">
+<app-cart-page></app-cart-page>  </div>
+  
+            
+              

@@ -1,0 +1,32 @@
+<p >cart-page works!</p>
+
+<!--****************************************body cards ******************************-->
+
+<section class="product">
+    <h2 class="product-category">best selling</h2>
+  
+    <div class="product-container" id="product-container">
+
+        <div class="product-card"  *ngFor="let s of qtycart">
+
+            <div class="product-image"  >
+                <span class="discount-tag">50% off</span>
+                <img [src]="s.path" class="product-thumb" alt="">
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-brand">{{s.name}}</h2>
+                <p class="product-short-des">Quality as puma</p>
+                <p class="quantity numbers">Quantity{{s.quantity}}</p>
+                <span class="price">$20</span>
+                <br>
+                <span class="actual-price">Indian price{{s.price}}</span>
+                
+                <button (click)="onButtonClick(s.prod_order)" >+</button>
+                <h2 class="quantity_no" ></h2>
+            <!-- <h2 class="total_cost">total {{(product_count) * getNumber(s.price)}}</h2> -->
+            
+        </div>
+        </div> 
+    </div>
+</section>
